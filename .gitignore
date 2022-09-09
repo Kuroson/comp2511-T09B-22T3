@@ -1,0 +1,16 @@
+gradlew
+gradlew.bat
+bin/
+.gradle/
+.idea/
+gradle/
+build/
+out/
+bin/
+.DS_Store
+.classpath
+.project
+.settings
+
+*.class
+*Zone.Identifier

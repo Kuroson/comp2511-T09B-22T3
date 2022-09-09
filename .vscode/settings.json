@@ -1,0 +1,29 @@
+{
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "java.format.settings.url": ".vscode/java-formatter.xml",
+  "[java]": {
+    "editor.detectIndentation": false
+  },
+  "java.debug.settings.vmArgs": "-ea",
+  "java.format.comments.enabled": false,
+  "java.project.sourcePaths": [
+    "tute03/src",
+    "tute02",
+    "tute01",
+    "tute04/src",
+    "tute05/src",
+    "tute07/src",
+    "tute08/src",
+    "tute10/src"
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "tute03/lib/**/*.jar",
+    "tute04/lib/**/*.jar",
+    "tute05/lib/**/*.jar",
+    "tute07/lib/**/*.jar",
+    "tute08/lib/**/*.jar",
+    "tute10/lib/**/*.jar"
+  ]
+}
