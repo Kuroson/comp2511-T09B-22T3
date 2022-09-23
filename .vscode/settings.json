@@ -7,6 +7,15 @@
   },
   "java.debug.settings.vmArgs": "-ea",
   "java.format.comments.enabled": false,
-  "java.project.sourcePaths": ["tute01", "tute02/src"],
-  "java.project.referencedLibraries": ["lib/**/*.jar"]
+  "java.project.sourcePaths": [
+    "tute01",
+    "tute02/src",
+    "tute03/src",
+    "tute04/src"
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "tute03/lib/**/*.jar",
+    "tute04/lib/**/*.jar"
+  ]
 }
