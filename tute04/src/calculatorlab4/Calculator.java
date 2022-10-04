@@ -1,4 +1,4 @@
-package calculator;
+package calculatorlab4;
 
 public class Calculator {
 
