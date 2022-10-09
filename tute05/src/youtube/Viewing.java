@@ -6,7 +6,7 @@ public class Viewing {
     private Video video;
     private Video nextVideo;
     private Producer user;
-    private boolean playing = false;
+    private boolean playing = false; // Is the video playing
 
     public Viewing(Video video, Video nextVideo, Producer user) {
         this.video = video;
