@@ -15,21 +15,17 @@ public class Producer {
         this.name = name;
     }
 
-    /**
-     * Adding an subscriber (observer)
-     * @param user
-     */
     public void addSubscriber(User user) {
-        // TODO
+        this.subscribers.add(user);
     }
 
-    /**
-     * Posting a new video (notifying all observers)
-     * @param name
-     * @param length
-     */
     public void postVideo(String name, int length) {
-        // TODO
+        Video video = new Video(name, length, this);
+        this.videos.add(video);
+
+        for (User subscriber : this.subscribers) {
+            subscriber.alertNewVideo(video);
+        }
     }
 
     @Override
