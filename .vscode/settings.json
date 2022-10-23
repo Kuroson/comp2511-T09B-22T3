@@ -12,12 +12,14 @@
     "tute02/src",
     "tute03/src",
     "tute04/src",
-    "tute05/src"
+    "tute05/src",
+    "tute07/src"
   ],
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
     "tute03/lib/**/*.jar",
     "tute04/lib/**/*.jar",
-    "tute05/lib/**/*.jar"
+    "tute05/lib/**/*.jar",
+    "tute07/lib/**/*.jar"
   ]
 }
