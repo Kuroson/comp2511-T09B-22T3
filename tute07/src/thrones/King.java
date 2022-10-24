@@ -12,6 +12,10 @@ public class King extends Character {
         super(x, y);
     }
 
+    public King(int x, int y, int z) {
+        super(x, y);
+    }
+
     @Override
     public void attack(Character victim) {
         victim.damage(8);

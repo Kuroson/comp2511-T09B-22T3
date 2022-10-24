@@ -10,7 +10,7 @@ public class AdditionExpression implements Expression {
     }
 
     public double compute() {
-        return 0.0;
+        return e1.compute() + e2.compute();
     }
 
 }

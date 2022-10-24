@@ -1,7 +1,10 @@
 package calculator.expression;
 
 public class Number implements Expression {
+    private double number;
+
     public Number(double number) {
+        this.number = number;
     }
 
     /**
@@ -9,7 +12,7 @@ public class Number implements Expression {
      * @postconditions - returns number
      */
     public double compute() {
-        return 0.0;
+        return this.number;
     }
 
 }
