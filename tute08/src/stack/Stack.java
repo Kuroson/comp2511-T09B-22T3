@@ -11,11 +11,18 @@ import java.util.List;
  *
  */
 public class Stack<E> implements Iterable<E> {
+    private List<E> data = new ArrayList<>();
+
+    public Stack() {
+        // 
+    }
+
     /**
      * Pushes an element onto the top of the stack.
      * @param element
      */
     public void push(E element) {
+        this.data.add(element);
     }
 
     /**
@@ -23,42 +30,53 @@ public class Stack<E> implements Iterable<E> {
      * @precondition The stack is not empty.
      */
     public E pop() {
-        return null;
+        return this.data.remove(this.data.size() - 1);
     }
 
     /**
      * Returns the top element of the stack, without removing it.
      */
     public E peek() {
-        return null;
+        return this.data.get(this.size() - 1);
     }
 
     /**
      * Returns an iterator to the internal data structure of the stack.
      */
     public Iterator<E> iterator() {
-        return null;
+        List<E> copy = this.toArrayList();
+        return copy.iterator();
     }
 
     /**
      * Returns the size of the stack.
      */
     public int size() {
-        return 0;
+        return this.data.size();
     }
 
     /**
-     * Returns the stack as an ArrayList
+     * Returns the stack as an List
      */
-    public ArrayList<E> toArrayList() {
-        return null;
+    public List<E> toArrayList() {
+        List<E> copy = new ArrayList<>(data);
+        Collections.reverse(copy);
+        return copy;
     }
 
     public static Integer sumStack(Stack<? extends Integer> stack) {
-        return 0;
+        Integer counter = 0;
+        for (Integer x : stack) {
+            counter += x;
+        }
+        return counter;
     }
 
     public static void prettyPrint(Stack<?> stack) {
+
+        for (Object x : stack) {
+            System.out.println(x);
+        }
     }
 
     public static void main(String[] args) {

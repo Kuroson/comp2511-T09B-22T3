@@ -7,9 +7,19 @@ package heist;
  */
 public class BankAccountAccessor {
     private BankAccount account;
+    private static BankAccountAccessor instance = null;
 
-    public BankAccountAccessor(BankAccount account) {
+    private BankAccountAccessor(BankAccount account) {
         this.account = account;
+    }
+
+    public static synchronized BankAccountAccessor getInstance(BankAccount account) {
+        if (BankAccountAccessor.instance == null) {// If the object doesnt exist
+            // Create it
+            BankAccountAccessor.instance = new BankAccountAccessor(account);
+        }
+        // Return it
+        return BankAccountAccessor.instance;
     }
 
     public void withdraw(String user, int numberOfWithdrawals, int amountPerWithdrawal) {
