@@ -12,8 +12,7 @@ import thrones9.Character;
  */
 public abstract class Character {
     private int healthPoints;
-
-    private int x, y;
+    protected int x, y;
 
     public Character(int x, int y) {
         healthPoints = 100;
@@ -47,8 +46,9 @@ public abstract class Character {
      * If it is an invalid move, returns INVALID.
      * If it is a valid move but the square is occupied, attacks the character and returns ATTACK
      * If it is a valid move and the square is free, returns SUCCESS
+     * Template Method
      */
-    public MoveResult makeMove(int x, int y, List<Character> characters) {
+    public final MoveResult makeMove(int x, int y, List<Character> characters) {
         // This function uses two abstract methods (AKA 'hook methods') which the concrete classes must implement
         if (!canMove(this.x - x, this.y - y)) {
             return MoveResult.INVALID;
@@ -69,7 +69,7 @@ public abstract class Character {
 
     /**
      * This character attacks the given victim, causing them damage according to
-     * their rules.
+     * their rules. Hooks
      *
      * @param victim
      */
@@ -77,6 +77,7 @@ public abstract class Character {
 
     /**
      * Can this character move by the given amount along the x and y axes.
+     * Hook
      *
      * @param x
      * @param y
