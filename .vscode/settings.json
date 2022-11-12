@@ -15,7 +15,8 @@
     "tute05/src",
     "tute07/src",
     "tute08/src",
-    "tute09/src"
+    "tute09/src",
+    "tute10/src"
   ],
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
